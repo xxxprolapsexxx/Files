@@ -29,3 +29,78 @@ jobs:
             Potential duplicates: {{#issues}}
               - [#{{ number }}] {{ title }} ({{ accuracy }}%)
             {{/issues}}
+Delivered-To: xxxprolapsexxx@gmail.com
+Received: by 2002:a05:6830:400d:0:0:0:0 with SMTP id h13csp1702530ots;
+        Sun, 17 Jan 2021 12:58:21 -0800 (PST)
+X-Google-Smtp-Source: ABdhPJzrgPlxn/C9y4QheUq4Gsq5K10J74sahkESepHcI++9u5HEWfkzrrNtnPG+kpUisgqNcsW+
+X-Received: by 2002:a65:4906:: with SMTP id p6mr22718698pgs.173.1610917101173;
+        Sun, 17 Jan 2021 12:58:21 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1610917101; cv=none;
+        d=google.com; s=arc-20160816;
+        b=h+glLMDQwF7YtmoIQkmlbA/NZmixjNfXauTESYHI6sk3tsFG7ozvJLh7T2OF+MqVsE
+         ti9MELTVq9zLMde6kifSvYtx8cqo1rUABM+prH6yAwL8KHazKsNgAaQ6a+jgEnKRmhRr
+         gQHz1Cze0iwk883FX5rg5Z3yuHxjKRemszXsjCRUY6eocqmn7YE6x0h60ytPvkfhcpzJ
+         gqAnXpQbxBbKSDjI/PALy0m+Y0Jes3NowSLksBtJXmFwZ1aebBL4ptjPqsubSw139j1X
+         HQ2j9rA/mbq73ArEZhz7FRbSV61wKQi1QuySA3C6e2f7RJysAqkukZ1HuMO87KuslHEj
+         KfFw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=categories:content-transfer-encoding:mime-version:subject
+         :message-id:to:from:date:dkim-signature:dkim-signature;
+        bh=RUzCT00fYADN5KTtK519SrJqD1Lz7eSRdrcgVpq6xDg=;
+        b=w6+xECXHdGhSZEmNdoiXoWZUl6r9zTHsFBuYv40xyXMbHSvL+tOjlrZaPkwN8/M8i1
+         sbLSQtw/HsvykscZ4TmWu9KEeqQvWzJfUvp1zW5WZfINvfY1LO+xiVEfFvV036TlZ9V/
+         nGqnxa3RVc95RjL9AP/jlv1rqlZOC8AT5PBFNpgRCIjs+itLfn7bE/EiD+wxPZjfe3xc
+         EevIH9fQYTYktIob80xn9QUwf1saub/DWXKduqPqZo5X/N5FJVTR5iXP+LsJJ+yFvJh1
+         AC1iLODdudLUxHYAVpWLmgDyxxernHLEBSHFJlEcQqNojzqFWxbKuMb2jY9QEyaFdvQ9
+         vtcg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@github.com header.s=s20150108 header.b=iGmlgL1J;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=HSNaebBa;
+       spf=pass (google.com: domain of bounces+848413-9cf0-xxxprolapsexxx=gmail.com@sgmail.github.com designates 192.254.112.99 as permitted sender) smtp.mailfrom="bounces+848413-9cf0-xxxprolapsexxx=gmail.com@sgmail.github.com";
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=github.com
+Return-Path: <bounces+848413-9cf0-xxxprolapsexxx=gmail.com@sgmail.github.com>
+Received: from o4.sgmail.github.com (o4.sgmail.github.com. [192.254.112.99])
+        by mx.google.com with ESMTPS id k35si18484531pgb.70.2021.01.17.12.58.19
+        for <xxxprolapsexxx@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 17 Jan 2021 12:58:21 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounces+848413-9cf0-xxxprolapsexxx=gmail.com@sgmail.github.com designates 192.254.112.99 as permitted sender) client-ip=192.254.112.99;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@github.com header.s=s20150108 header.b=iGmlgL1J;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=HSNaebBa;
+       spf=pass (google.com: domain of bounces+848413-9cf0-xxxprolapsexxx=gmail.com@sgmail.github.com designates 192.254.112.99 as permitted sender) smtp.mailfrom="bounces+848413-9cf0-xxxprolapsexxx=gmail.com@sgmail.github.com";
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=github.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=github.com; h=from:to:subject:mime-version:content-type:content-transfer-encoding; s=s20150108; bh=RUzCT00fYADN5KTtK519SrJqD1Lz7eSRdrcgVpq6xDg=; b= iGmlgL1JCFHBvmtkoxisW+wwpFSufjnIpHVEmE0DXyQtm90YVVS7Lyp/HhmhhiJD dGagO6qF3MXas3yzKk0pARJqrlef23s46/CvLlc+0dduE2UQCpeaFegSl25X8Mk0 1HW3f1sH6gun6mqtUEVEs2KXRMkJan6ceh5EwJM/uqU=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.info; h=from:to:subject:mime-version:content-type:content-transfer-encoding:x-feedback-id; s=smtpapi; bh=RUzCT00fYADN5KTtK519SrJqD1Lz7eSRdrcgVpq6xDg=; b=HS NaebBaps/U3hAzEIQMdhnp/X4fNK2qyT1rGteEut4XOueYYLS6+MPOi3xpefL33Z D+Og5L7Xf8kk9h79MapZ2phhpVnX8NJ4hgowAk931P6ay5xPyOlwZUcsx39FQ1MW WG2T5j1WYzpzd5XPkdxNIuOIOARex1/qJjhV//TJM=
+Received: by filter1505p1iad2.sendgrid.net with SMTP id filter1505p1iad2-772-6004A4E9-21
+        2021-01-17 20:58:17.479755823 +0000 UTC m=+159742.317223612
+Received: from smtp.github.com (unknown) by geopod-ismtpd-1-0 (SG) with ESMTP id 3lsYk1MxTCudaFPb6q3z_w for <xxxprolapsexxx@gmail.com>; Sun, 17 Jan 2021 20:58:17.456 +0000 (UTC)
+Received: from github.com (hubbernetes-node-d3cb98f.ac4-iad.github.net [10.52.121.66]) by smtp.github.com (Postfix) with ESMTPA id 52889600D5F for <xxxprolapsexxx@gmail.com>; Sun, 17 Jan 2021 12:58:17 -0800 (PST)
+Date: Sun, 17 Jan 2021 20:58:17 +0000 (UTC)
+From: GitHub <noreply@github.com>
+To: xxxprolapsexxx <xxxprolapsexxx@gmail.com>
+Message-ID: <6004a4e950129_20341a0419109d@lowworker-744645d88f-c9zzh.mail>
+Subject: [GitHub] A third-party OAuth application has been added to your account
+Mime-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-Auto-Response-Suppress: All
+categories: account-security,new-oauth-authorization
+X-SG-EID: K6FRXVG3mOQ7GuagbI3Y9Em9off4B3UlGee2DhsDxxAlqIUQ0fgFYp0LU7O7/O0t93a5PxYVKL1sih 2oLrVZ5NsYDK0axXKD7rpPCfr9pPbD8UvkMcWUKrtVxb5JZCX7ZcnXQWcka2u0kmW6u0CzokpgYlcq gK/CfpMQ3QU3si62wVkD1EQg6EDeuMMtNHn3IeAIcx/9G/DuOYMSEllUUQ==
+X-SG-ID: HjuyJHjWedrv+ZABmVoKqJUGcbnIrpG8Dl8TZw63o/tYHvHAZuj7fE3sBkCPSNz92pSnrCLqO00MaT UToqoVhg==
+X-Entity-ID: /f+S0XqulHHajbNb6hGdxg==
+X-Feedback-ID: 848413:6xvVEJqleZlAW7/vhv7PzD/cv5tamo2SWZDKyvugGvg=:/tVyTrc5pGf9LyskfwdeL8MHpmfxmY45w4+vOgpL1lE=:SG
+
+Hey xxxprolapsexxx!
+
+
+
+A third-party OAuth application (Microsoft-Corporation) with read:user and user:email scopes was recently authorized to access your account.
+Visit https://github.com/settings/connections/applications/e37ffdec11c0245cb2e0 for more information.
+
+To see this and other security events for your account, visit https://github.com/settings/security-log
+
+If you run into problems, please contact support by visiting https://github.com/contact
+
+Thanks,
+The GitHub Team
